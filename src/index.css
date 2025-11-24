@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Warm editorial palette */
+    --background: 36 44% 97%;
+    --foreground: 24 20% 20%;
+
+    --card: 40 40% 99%;
+    --card-foreground: 24 20% 20%;
+
+    --popover: 40 40% 99%;
+    --popover-foreground: 24 20% 20%;
+
+    --primary: 24 30% 30%;
+    --primary-foreground: 36 44% 97%;
+
+    --secondary: 32 35% 88%;
+    --secondary-foreground: 24 30% 30%;
+
+    --muted: 32 30% 92%;
+    --muted-foreground: 24 15% 50%;
+
+    --accent: 18 60% 62%;
+    --accent-foreground: 40 40% 99%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 40 40% 99%;
+
+    --border: 32 25% 88%;
+    --input: 32 25% 88%;
+    --ring: 24 30% 30%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --note-card: 40 40% 99%;
+    --note-hover: 36 35% 96%;
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(24 20% 20% / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(24 20% 20% / 0.12);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 24 15% 12%;
+    --foreground: 36 44% 95%;
+
+    --card: 24 12% 16%;
+    --card-foreground: 36 44% 95%;
+
+    --popover: 24 12% 16%;
+    --popover-foreground: 36 44% 95%;
+
+    --primary: 36 44% 95%;
+    --primary-foreground: 24 30% 30%;
+
+    --secondary: 24 10% 20%;
+    --secondary-foreground: 36 44% 95%;
+
+    --muted: 24 10% 22%;
+    --muted-foreground: 36 20% 65%;
+
+    --accent: 18 55% 58%;
+    --accent-foreground: 24 12% 16%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 36 44% 95%;
+
+    --border: 24 10% 22%;
+    --input: 24 10% 22%;
+    --ring: 36 44% 95%;
+    
+    --note-card: 24 12% 16%;
+    --note-hover: 24 10% 18%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 600;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Karla:wght@300;400;500;600&display=swap');
